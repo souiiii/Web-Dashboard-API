@@ -1,0 +1,22 @@
+# =============================================
+#   WebDashboardAPI - Configuration
+# =============================================
+
+# Port for the embedded HTTP server.
+# Make sure this port is open in your firewall/router if accessing remotely.
+port: 8080
+
+# Optional Bearer token for API authentication.
+# If non-empty, all /api/* requests must include the header:
+#   Authorization: Bearer <your-token-here>
+# The WebSocket connection must pass it as a query param: /ws?token=<token>
+# Leave empty ("") to disable authentication entirely.
+auth-token: ""
+
+# Maximum number of chat messages to keep in the in-memory chat log.
+# Older messages are dropped as new ones arrive.
+chat-log-size: 100
+
+# How often (in ticks, 20 ticks = 1 second) to broadcast TPS/player data
+# to all connected WebSocket clients.
+ws-broadcast-interval: 40

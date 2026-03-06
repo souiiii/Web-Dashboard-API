@@ -1,0 +1,19 @@
+name: WebDashboardAPI
+version: 1.0.0
+main: dev.dashboard.WebDashboardPlugin
+api-version: "1.20"
+description: Embedded HTTP + WebSocket admin dashboard for PaperMC 1.20
+authors: [Dashboard]
+website: http://localhost:8080
+
+commands:
+  wdash:
+    description: Web Dashboard control commands
+    usage: /wdash <reload|status>
+    permission: webdashboard.admin
+    aliases: [webdash, wd]
+
+permissions:
+  webdashboard.admin:
+    description: Allows full control of the Web Dashboard plugin
+    default: op
